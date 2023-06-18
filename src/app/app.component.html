@@ -1,0 +1,12 @@
+ <table>
+    <tr>
+      <th>State</th>
+      <th>County</th>
+      <th>Item</th>
+    </tr>
+    <tr *ngFor="let item of dataExt">
+      <td [attr.rowspan]="item.stateSpan" *ngIf="item.stateSpan">{{ item.state }}</td>
+      <td [attr.rowspan]="item.countySpan" *ngIf="item.countySpan">{{ item.county }}</td>
+      <td>{{ item.item }}</td>
+    </tr>
+</table>
